@@ -32,6 +32,10 @@ const Cart = () => {
       .where("SelectedSize", "==", items[i].SelectedSize)
       .get()
       .then((snapshot) => {
+        if (snapshot.empty) {
+          console.log("未找到匹配的文档");
+          return;
+        }
         snapshot.forEach((doc) => {
           doc.ref
             .update({
@@ -78,11 +82,7 @@ const Cart = () => {
                       src={shirt_base}
                       alt="details_image"
                     />
-                    <img
-                      id="overlay_image"
-                      src={item.ImgUrl}
-                      alt="overlay_image"
-                    />
+                    <img id="overlay_image" src={item.ImgUrl} alt="" />
                   </div>
                 ) : (
                   <img
