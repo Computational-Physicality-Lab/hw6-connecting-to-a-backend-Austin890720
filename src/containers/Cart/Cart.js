@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Cart.css";
 import shirts from "../../shared/shirts";
 import routes from "../../shared/appRoutes";
@@ -73,8 +73,16 @@ const Cart = () => {
               <div className="element_left">
                 {item.DIY ? (
                   <div className="mix_shirt">
-                    <img id="details_image" src={shirt_base} />
-                    <img id="overlay_image" src={item.ImgUrl} />
+                    <img
+                      id="details_image"
+                      src={shirt_base}
+                      alt="details_image"
+                    />
+                    <img
+                      id="overlay_image"
+                      src={item.ImgUrl}
+                      alt="overlay_image"
+                    />
                   </div>
                 ) : (
                   <img

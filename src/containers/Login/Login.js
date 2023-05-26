@@ -39,7 +39,7 @@ const Login = ({ user }) => {
       <div className="login_box">
         {user == null ? (
           <button type="button" className="login" onClick={signInWithGoogle}>
-            <img className="google" src={google} />
+            <img className="google" src={google} alt="" />
             <span className="login_text">Log In with Google</span>
           </button>
         ) : (

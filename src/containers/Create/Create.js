@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useCallback } from "react";
 import { Container } from "reactstrap";
 import "./Create.css";
 import { useState } from "react";
@@ -16,14 +16,8 @@ const Create = ({ user }) => {
   const [currentQuery, setCurrentQuery] = useState("");
   const [imageUrls, setImageUrls] = useState([[]]);
   const [selectPicUrl, setSelectPicUrl] = useState("");
-  useEffect(() => {
-    async function fetchDate() {
-      const response = await getData();
-      setImageUrls(response);
-    }
-    fetchDate();
-  }, []);
-  const getData = async () => {
+
+  const getData = useCallback(async () => {
     setCurrentQuery(searchQuery);
     const unsplash = createApi({
       accessKey: "PkJOfYsNtJFKtyGr27eoyiKB6CLYJeexVACRJDVn7Zs",
@@ -42,7 +36,16 @@ const Create = ({ user }) => {
       });
     setImageUrls(urls);
     return urls;
-  };
+  }, [searchQuery]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await getData();
+      setImageUrls(response);
+    };
+
+    fetchData();
+  }, [getData]);
+
   const addImage = (imgURL) => {
     setShirtName(currentQuery);
     setSelectPicUrl(imgURL);
@@ -98,8 +101,8 @@ const Create = ({ user }) => {
       >
         <div className="create_left">
           <div className="mix_shirt">
-            <img id="details_image" src={shirt_base} />
-            <img id="overlay_image" src="" />
+            <img id="details_image" src={shirt_base} alt="details_image" />
+            <img id="overlay_image" src="" alt="overlay_image" />
           </div>
           <p className="shirt_price">$20.00</p>
           <div style={{ display: "flex", alignItems: "center" }}>
@@ -184,6 +187,7 @@ const Create = ({ user }) => {
                   height="130px"
                   width="130px"
                   src={imageUrls[0][i].urls.thumb}
+                  alt="imageUrl.id"
                 />
               </button>
             ))}
