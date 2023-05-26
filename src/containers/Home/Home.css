@@ -1,0 +1,19 @@
+.document{
+    height: 250px;
+    display: flex;
+}
+.box{
+    border:2px solid #c51230;background-color:#ffffff;
+    width:500px;
+    height:180px;
+    padding: 10px;
+    margin:20px auto;
+    border-radius: 10px;
+}
+.box_title{
+    color: #c51230;
+    font-family: Open Sans;
+}
+.home{
+    width: 100%;
+}

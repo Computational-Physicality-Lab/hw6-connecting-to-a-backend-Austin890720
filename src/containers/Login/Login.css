@@ -1,0 +1,27 @@
+.login {
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+}
+
+.login_box {
+    display: flex;
+    justify-content: center;
+}
+
+.google {
+    height: 50px;
+}
+
+.login_text {
+    font-size: 1cm;
+}
+
+.login:hover {
+    transform: scale(1.05);
+    transition: .5s;
+}

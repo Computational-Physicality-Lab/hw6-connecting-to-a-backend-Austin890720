@@ -1,0 +1,92 @@
+.shirt_details_name {
+    margin-right: 900px;
+    font-size: 1.2cm;
+    color: black;
+    font-family: Open Sans;
+    text-align: center;
+}
+
+.detail_element_right {
+    margin: 100px;
+}
+
+.details_element {
+    margin: 20px;
+}
+
+.details_button {
+    height: 30px;
+    width: 60px;
+    margin: 10px;
+    border: 2px black solid;
+}
+
+.details_button:hover {
+    color: aliceblue;
+}
+
+.side_button {
+    height: 30px;
+    width: 60px;
+    margin: 10px;
+    border: 2px black solid;
+}
+
+.side_button:hover {
+    color: aliceblue;
+}
+
+.shirt_details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shirt_price {
+    color: #ac2432;
+    font-family: Catamaran;
+    font-size: 1cm;
+    margin: 0px;
+}
+
+.shirt_description {
+    width: 500px;
+    color: #ac2432;
+    font-family: Catamaran;
+}
+
+.quantity_size {
+    height: 30px;
+    width: 60px;
+    border: 2px black solid;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.size_size {
+    height: 30px;
+    width: 120px;
+    border: 2px black solid;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.addToCart {
+    height: 80px;
+    width: 150px;
+    border: 2px black solid;
+    border-radius: 10px;
+    font-family: Catamaran;
+    font-size: 0.5cm;
+    color: white;
+    background-color: red;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.disabled-button {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

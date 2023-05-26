@@ -1,0 +1,22 @@
+.foot_Text{
+    margin:20px 60px;
+    color: white;
+    font-family: Open Sans;
+    text-decoration: none;
+}
+.foot{
+    display: flex;
+    justify-content: center;  
+    align-content: center;   
+    flex-wrap: wrap;
+    background-color: #c51230;
+}
+.foot_Text:hover{
+    color: #4a4a4a;
+}
+.austin_foot_Text{
+    margin:20px 60px;
+    color: white;
+    font-family: Open Sans;
+    text-decoration: none;
+}

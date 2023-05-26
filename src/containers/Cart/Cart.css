@@ -1,0 +1,97 @@
+.cart_header {
+  font-size: 1cm;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 150px;
+  margin-left: 150px;
+  font-family: Catamaran;
+}
+
+.cart_Tshirts {
+  width: 50%;
+  margin-left: 150px;
+}
+
+.element_name {
+  font-size: 1cm;
+  font-family: Catamaran;
+  color: gray;
+}
+
+.data {
+  color: red;
+}
+
+.element_left {
+  display: inline-block;
+}
+.element_img {
+  width: 300px;
+}
+.element_right {
+  display: inline-block;
+  align-items: center;
+  margin: 30px;
+}
+.remove_button {
+  height: 50px;
+  width: 100px;
+  border: 2px black solid;
+  border-radius: 10px;
+  font-family: Catamaran;
+  font-size: 0.5cm;
+  color: white;
+  background-color: red;
+}
+.remove_button:hover {
+  background-color: #c51230;
+}
+.order_summary {
+  font-size: 1cm;
+  font-family: Catamaran;
+  margin: 20px;
+}
+.order_summary_box {
+  margin: 20px;
+  height: 350px;
+  width: 500px;
+  border: 2px red solid;
+  border-radius: 10px;
+}
+.price_left {
+  color: gray;
+  font-family: Catamaran;
+}
+.price_right {
+  color: red;
+}
+.signin_button {
+  height: 50px;
+  width: 250px;
+  border: 2px black solid;
+  border-radius: 10px;
+  font-family: Catamaran;
+  font-size: 0.5cm;
+  color: white;
+  background-color: red;
+}
+.disabled {
+  pointer-events: none;
+}
+
+.disabled-button {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.signin_button:hover {
+  background-color: #c51230;
+}
+.mix_shirt {
+  position: relative;
+}
+#overlay_image {
+  position: absolute;
+  left: 85px;
+  top: 70px;
+  width: 130px;
+}
