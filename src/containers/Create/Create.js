@@ -34,6 +34,8 @@ const Create = ({ user }) => {
           urls.push(result.response.results);
         }
       });
+    console.log(urls[0]);
+    console.log(urls[0].length);
     setImageUrls(urls);
     return urls;
   };
@@ -170,10 +172,8 @@ const Create = ({ user }) => {
               Search
             </button>
           </div>
-          {currentQuery === "" ? (
-            <p className="no_search_results_text">
-              No search results. Maybe use a Scotty?
-            </p>
+          {currentQuery === "" || imageUrls[0].length === 0 ? (
+            <p className="no_search_results_text">No search results</p>
           ) : (
             <p></p>
           )}
