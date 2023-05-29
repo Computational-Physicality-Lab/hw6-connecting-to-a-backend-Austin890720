@@ -32,12 +32,19 @@ const Header = ({ user }) => {
         <p style={{ fontFamily: "Catamaran" }} className="center">
           Scotty Shirts U Illustrate (SSUI)
         </p>
-        <Link to={routes.shoppingCart}>
+        {user === null ? (
           <button type="button" className="cart_button">
             <img className="right" src={cart} alt="shopping-cart" />
             <span className="cart_number">{number}</span>
           </button>
-        </Link>
+        ) : (
+          <Link to={routes.shoppingCart}>
+            <button type="button" className="cart_button">
+              <img className="right" src={cart} alt="shopping-cart" />
+              <span className="cart_number">{number}</span>
+            </button>
+          </Link>
+        )}
       </div>
       <hr />
       <div className="menu">
